@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat GPT Demo</title>
+    <style>
+        /* 添加一些基本的样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .input-container {
+            margin-bottom: 20px;
+        }
+
+        .input-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .input-container textarea {
+            width: 100%;
+            height: 150px;
+            resize: none;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .response-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chat GPT Demo</h1>
+        <form action="/generate" method="post">
+            <div class="input-container">
+                <label for="background">产品背景：</label>
+                <textarea id="background" name="background" required></textarea>
+            </div>
+            <div class="input-container">
+                <label for="scenario">业务场景：</label>
+                <textarea id="scenario" name="scenario" required></textarea>
+            </div>
+            <div class="input-container">
+                <label for="requirements">需求简述：</label>
+                <textarea id="requirements" name="requirements" required></textarea>
+            </div>
+            <div>
+                <button type="submit">生成回复</button>
+            </div>
+        </form>
+        {% if user_story_title and acceptance_criteria %}
+            <div class="response-container">
+                <h3>生成的用户故事标题：</h3>
+                <p>{{ user_story_title }}</p>
+                <h3>生成的用户故事验收标准：</h3>
+                <p>{{ acceptance_criteria }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat GPT Demo</title>
+    <style>
+        /* 添加一些基本的样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            margin-bottom: 10px;
+        }
+
+        .input-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .input-container textarea {
+            width: 100%;
+            height: 100px;
+            resize: vertical;
+        }
+
+        .response-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chat GPT Demo</h1>
+    <form action="/generate" method="post">
+        <div class="input-container">
+            <label for="product_background">产品背景：</label>
+            <textarea id="product_background" name="product_background" required></textarea>
+        </div>
+        <div class="input-container">
+            <label for="business_scenario">业务场景：</label>
+            <textarea id="business_scenario" name="business_scenario" required></textarea>
+        </div>
+        <div class="input-container">
+            <label for="requirement_description">需求简述：</label>
+            <textarea id="requirement_description" name="requirement_description" required></textarea>
+        </div>
+        <div>
+            <button type="submit">生成回复</button>
+        </div>
+    </form>
+    {% if response %}
+        <div class="response-container">
+            <h3>生成的回复：</h3>
+            <p>{{ response }}</p>
+        </div>
+    {% endif %}
+</body>
+</html>

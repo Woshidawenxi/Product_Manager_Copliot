@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Epic 五要素分析</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+
+        textarea {
+            width: 600px;
+            height: 200px;
+            resize: none;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Epic 五要素分析</h1>
+    <form action="/generate_epic_analysis" method="post">
+        <label for="product_info">产品名称及介绍：</label>
+        <textarea id="product_info" name="product_info" maxlength="200" required></textarea><br>
+        <label for="user_info">产品用户：</label>
+        <textarea id="user_info" name="user_info" maxlength="200" required></textarea><br>
+        <label for="scenario_description">业务场景：</label>
+        <textarea id="scenario_description" name="scenario_description" maxlength="200" required></textarea><br>
+        <input type="submit" value="生成 Epic 五要素分析">
+    </form>
+    {% if epic_analysis %}
+        <h2>Epic 五要素分析：</h2>
+        <p>{{ epic_analysis }}</p>
+    {% endif %}
+</body>
+</html>
