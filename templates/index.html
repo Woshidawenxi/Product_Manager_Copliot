@@ -5,59 +5,76 @@
     <style>
         /* 添加一些基本的样式 */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 20px;
         }
 
-        h1 {
+        .bytedance-container {
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        .bytedance-title {
+            font-size: 24px;
             margin-bottom: 20px;
+            color: #333;
         }
 
-        .input-container {
-            margin-bottom: 10px;
-        }
-
-        .input-container label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-
-        .input-container textarea {
+        .bytedance-form input[type="text"],
+        .bytedance-form textarea {
             width: 100%;
-            height: 100px;
-            resize: vertical;
+            height: 120px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
         }
 
-        .response-container {
-            margin-top: 20px;
+        .bytedance-form button {
+            padding: 10px 20px;
+            background-color: #3385FF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .bytedance-response textarea {
+            width: 100%;
+            height: 120px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
         }
     </style>
 </head>
 <body>
-    <h1>Chat GPT Demo</h1>
-    <form action="/generate" method="post">
-        <div class="input-container">
-            <label for="product_background">产品背景：</label>
-            <textarea id="product_background" name="product_background" required></textarea>
-        </div>
-        <div class="input-container">
-            <label for="business_scenario">业务场景：</label>
-            <textarea id="business_scenario" name="business_scenario" required></textarea>
-        </div>
-        <div class="input-container">
-            <label for="requirement_description">需求简述：</label>
-            <textarea id="requirement_description" name="requirement_description" required></textarea>
-        </div>
-        <div>
-            <button type="submit">生成回复</button>
-        </div>
-    </form>
-    {% if response %}
-        <div class="response-container">
-            <h3>生成的回复：</h3>
-            <p>{{ response }}</p>
-        </div>
-    {% endif %}
+    <div class="bytedance-container">
+        <h1 class="bytedance-title">用户故事标题&验收标准智能生成 Demo</h1>
+
+        <form class="bytedance-form" action="/generate" method="post">
+            <div>
+                <label for="product_background">产品概述：</label>
+                <textarea id="product_background" name="product_background" required> 我的产品名称是AI产品助手，业务场景是针对敏捷开发用户故事的AI生成，基于AI大语言模型如：chatgpt、Claude、文心一言生等，根据输入的产品概述和用户具体需求描述，使用AI大语言模型自动生成内容规范的且格式合理的敏捷开发用户故事标题和验收标准。再补充下相关背景：我的产品是一个独立开发的开源项目，针对C端用户（主要是产品经理），类似于chatgpt的插件。产品使用者通过自然语言描述收集到的用户需求和自己的产品的背景输入大语言模型最终生成可以发送给程序开发工程师的故事题目和故事验收标准。通过快速智能生成高质量的用户故事标题和验收标准，来缩短产品写用户故事的时间，实现工作提效。</textarea>
+            </div>
+
+            <div>
+                <label for="requirement_description">用户需求描述：</label>
+                <textarea id="requirement_description" name="requirement_description" required>产品经理希望在AI产品助手中，输入固定的“产品背景描述”和不同的“用户需求描述”，一键生成用户故事标题及验收标准。</textarea>
+            </div>
+            <div>
+                <button type="submit">生成</button>
+            </div>
+        </form>
+
+            <div class="bytedance-response">
+                <label  for="acceptance_criteria">用户故事验收标准：</label>
+                <textarea id="acceptance_criteria" readonly> {{acceptance_criteria}} </textarea>
+            </div>
+    </div>
 </body>
 </html>
