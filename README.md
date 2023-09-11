@@ -10,15 +10,15 @@ openai 0.27.10<br>
 # 使用教程
 <br>  访问：[https://github.com/Woshidawenxi/AI_Product_Manager--Based-on-GPT-api-](https://github.com/Woshidawenxi/Product_Manager_Copliot)
 <br>  **1.下载程序包**
-<br>  ![1](https://github.com/Woshidawenxi/AI_Product_Manager--Based-on-GPT-api-/assets/72373043/f370ef1b-27c8-4deb-b981-dce9c24e875b)
+<br>  ![1](https://github.com/Woshidawenxi/Product_Manager_Copliot/assets/72373043/c6ee37ef-dafc-492e-bcc2-7a88817e8268)
 <br>  **2.打开"create_AC.py"，添加Openai_key**
-<br>  ![2](https://github.com/Woshidawenxi/AI_Product_Manager--Based-on-GPT-api-/assets/72373043/082e259c-d881-4556-8cb9-1a47edb318f2)
+<br>  ![2](https://github.com/Woshidawenxi/Product_Manager_Copliot/assets/72373043/315931d5-e051-45a1-947b-1cad255149bc)
 <br>  **3.运行程序，点击地址，跳转到用户页面**
-<br>  ![3](https://github.com/Woshidawenxi/AI_Product_Manager--Based-on-GPT-api-/assets/72373043/7e594882-9c8d-4f0a-92a7-ec20dc8028cf)
+<br>  ![3](https://github.com/Woshidawenxi/Product_Manager_Copliot/assets/72373043/87325f08-33bb-459d-9aa1-9a26974f0017)
 <br>  **4.页面输入框中会给出一个产品概述的提示和一个用户产品需求的描述的示例，根据示例修改适应您产品的内容。**
-<br>  ![4](https://github.com/Woshidawenxi/AI_Product_Manager--Based-on-GPT-api-/assets/72373043/497278a1-fe1d-4b93-812c-0c71de9597f5)
+<br>  ![4](https://github.com/Woshidawenxi/Product_Manager_Copliot/assets/72373043/f161060c-9ea5-4b50-9038-0b9ba73e6336)
 <br>  **5.点击生成，对应的答案将生成在故事验收标准处。**
-<br>  ![5](https://github.com/Woshidawenxi/AI_Product_Manager--Based-on-GPT-api-/assets/72373043/3377f34a-74f1-4488-8ef2-9de528250044)
+<br>  ![5](https://github.com/Woshidawenxi/Product_Manager_Copliot/assets/72373043/e260f34d-dbc8-49c0-b853-9b22f03e6b2c)
 <br>  返回的用户故事标题及验收标准如下：
 <br>  用户故事标题：作为产品经理，我想要使用AI产品助手输入产品背景描述和用户需求描述，以便于自动生成高质量的用户故事标题和验收标准。
 <br>  AC1: 
@@ -43,5 +43,6 @@ openai 0.27.10<br>
 <br>    Then: AI产品助手生成的用户故事标题和验收标准格式合理
 # 联系我们
 <br>  扫码添加社群，欢迎一起交流讨论有关AI的想法。
-<br>  ![6](https://github.com/Woshidawenxi/AI_Product_Manager--Based-on-GPT-api-/assets/72373043/67cd1256-2acb-43b6-b23f-7928c4148470)
+<br>  ![6](https://github.com/Woshidawenxi/Product_Manager_Copliot/assets/72373043/ad4842ff-ce12-42c0-8543-3c294e77714d)
+
 
