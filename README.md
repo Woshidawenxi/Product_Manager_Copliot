@@ -8,7 +8,7 @@ python     3.11<br>
 flask   2.3.3<br>
 openai 0.27.10<br>
 # 使用教程
-<br>  访问：https://github.com/Woshidawenxi/AI_Product_Manager--Based-on-GPT-api-
+<br>  访问：[https://github.com/Woshidawenxi/AI_Product_Manager--Based-on-GPT-api-](https://github.com/Woshidawenxi/Product_Manager_Copliot)
 <br>  **1.下载程序包**
 <br>  ![1](https://github.com/Woshidawenxi/AI_Product_Manager--Based-on-GPT-api-/assets/72373043/f370ef1b-27c8-4deb-b981-dce9c24e875b)
 <br>  **2.打开"create_AC.py"，添加Openai_key**
